@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    font-family: Nunito, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333
+}
+header {
+    background-color: #4dded9;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+header h1 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
