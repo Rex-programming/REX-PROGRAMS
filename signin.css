@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+[hidden] {
+    display: none !important;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #111;
+}
+.signin-header {
+    height: 85px;
+    padding: 0 6%;
+    background: #090909;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.signin-logo {
+    color: white;
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    text-decoration: none;
+}
+.signin-logo span {
+    color: #ff6500;
+}
+.back-home {
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.back-home:hover {
+    color: #ff6500;
+}
+.signin-layout {
+    min-height: calc(100vh - 85px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.account-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 8%;
+    background: white;
+}
+.account-content {
+    width: 100%;
+    max-width: 420px;
+}
+.eyebrow {
+    color: #ff6500;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+.account-content h1 {
+    font-size: clamp(48px, 5vw, 65px);
+    letter-spacing: -3px;
+    line-height: 1;
+    margin-bottom: 18px;
+}
+.account-content h1 span,
+.faq-content h2 span {
+    color: #ff6500;
+}
+.form-description {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+.field-group {
+    margin-bottom: 22px;
+}
+.field-group[hidden] {
+    display: none;
+}
+.field-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.field-group input {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fafafa;
+    font-size: 13px;
+    outline: none;
+    transition: border 0.3s;
+}
+.field-group input:focus {
+    border-color: #ff6500;
+}
+.password-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.password-heading button {
+    border: none;
+    background: none;
+    color: #ff6500;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.remember-row {
+    display: flex;
+    justify-content: flex-start;
+    margin: 4px 0 25px;
+}
+.remember-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #666;
+    font-size: 12px;
+    cursor: pointer;
+}
+.remember-label input {
+    accent-color: #ff6500;
+}
+.submit-button {
+    width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 12px;
+    background: #ff6500;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+.submit-button:hover {
+    background: #e85c00;
+    transform: translateY(-2px);
+}
+.form-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0 20px;
+    color: #999;
+    font-size: 11px;
+}
+.form-divider::before,
+.form-divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #e5e5e5;
+}
+.social-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.social-button {
+    height: 48px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: border 0.3s, background 0.3s;
+}
+.social-button:hover {
+    border-color: #ff6500;
+    background: #fafafa;
+}
+.social-button svg {
+    width: 17px;
+    height: 17px;
+}
+.account-switch {
+    margin-top: 30px;
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+}
+.account-switch button {
+    border: none;
+    background: none;
+    color: #ff6500;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.account-switch button:hover {
+    text-decoration: underline;
+}
+.form-message {
+    margin-top: 16px;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+}
+.faq-panel {
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 75px 9%;
+}
+.faq-content {
+    width: 100%;
+    max-width: 520px;
+}
+.faq-content h2 {
+    font-size: clamp(35px, 4vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 55px;
+}
+.faq-list {
+    border-top: 1px solid #d8d8d8;
+}
+.faq-item {
+    border-bottom: 1px solid #d8d8d8;
+}
+.faq-question {
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: none;
+    background: none;
+    text-align: left;
+    color: #111;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.faq-icon {
+    color: #ff6500;
+    font-size: 23px;
+    font-weight: normal;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+.faq-answer p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+    padding-bottom: 0;
+    margin: 0;
+}
+.faq-item.active .faq-answer p {
+    padding-bottom: 22px;
+}
+.faq-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 55px;
+    color: #999;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .signin-layout {
+        grid-template-columns: 1fr;
+    }
+    .account-panel {
+        padding: 75px 8%;
+    }
+    .faq-panel {
+        padding: 75px 8%;
+    }
+    .faq-content {
+        max-width: 600px;
+    }
+}
+@media (max-width: 480px) {
+    .signin-header {
+        height: 75px;
+        padding: 0 6%;
+    }
+
+    .account-panel,
+    .faq-panel {
+        padding: 60px 7%;
+    }
+
+    .account-content h1 {
+        font-size: 52px;
+    }
+
+    .faq-content h2 {
+        font-size: 38px;
+    }
+
+    .faq-footer {
+        flex-direction: column;
+    }
+}
+
+.prime-footer {
+    background: #090909;
+    color: #ffffff;
+    padding: 65px 5% 25px;
+}
+
+/* MAIN FOOTER */
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 45px;
+
+    padding-bottom: 55px;
+}
+
+/* BRAND */
+
+.footer-brand {
+    max-width: 320px;
+}
+
+.footer-logo {
+    display: inline-block;
+
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 800;
+    letter-spacing: -2px;
+
+    text-decoration: none;
+    margin-bottom: 17px;
+}
+
+.footer-logo span {
+    color: #ff4b16;
+}
+
+.footer-brand p {
+    max-width: 270px;
+
+    color: #9299a6;
+    font-size: 13px;
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+/* SOCIAL LINKS */
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 37px;
+    height: 37px;
+
+    border: 1px solid #383838;
+    border-radius: 50%;
+
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.footer-socials a:hover {
+    background: #ff4b16;
+    border-color: #ff4b16;
+}
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+
+    margin-bottom: 7px;
+}
+
+.footer-column a {
+    width: fit-content;
+
+    color: #9299a6;
+    font-size: 13px;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #ff4b16;
+}
+
+/* DIVIDER */
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: #303030;
+    margin-bottom: 23px;
+}
+
+/* COPYRIGHT */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #9299a6;
+    font-size: 11px;
+}
+
+.footer-bottom span {
+    color: #656c78;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .prime-footer {
+        padding: 50px 6% 25px;
+    }
+
+    .footer-main {
+        gap: 35px 20px;
+    }
+
+    .footer-column h3 {
+        font-size: 13px;
+    }
+
+    .footer-column a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+}
