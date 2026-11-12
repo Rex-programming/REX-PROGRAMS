@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | PRIME</title>
+    <link rel="stylesheet" href="signin.css">
+    <script src="signin.js" defer></script>
+</head>
+<body>
+    <header class="signin-header">
+        <a href="HTLM.html" class="signin-logo">
+            PRIME<span>.</span>
+        </a>
+        <a href="HTLM.html" class="back-home">← BACK TO PRIME</a>
+    </header>
+<main class="signin-layout">
+        <section class="account-panel">
+            <div class="account-content">
+                <p class="eyebrow" id="form-eyebrow">ACCOUNT</p>
+                <h1 id="form-title">Sign in<span>.</span></h1>
+                <p class="form-description" id="form-description">
+                    Welcome back. Sign in to continue your journey with PRIME.
+                </p>
+                <form id="accountForm">
+                    <div class="field-group" id="name-field" hidden>
+                        <label for="name">Full name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            autocomplete="name"
+                        >
+                    </div>
+                    <div class="field-group" id="email-field">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+                    <div class="field-group" id="password-field">
+                        <div class="password-heading">
+                            <label for="password">Password</label>
+                            <button type="button" id="forgot-link">
+                                Forgot password?
+                            </button>
+                        </div>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required>
+                    </div>
+            <div class="field-group" id="confirm-password-field" hidden>
+    <label for="confirm-password">Confirm password</label>
+    <input
+        type="password"
+        id="confirm-password"
+        name="confirm-password"
+        placeholder="Confirm your password"
+        autocomplete="new-password"
+    >
+            </div>
+                    <div class="remember-row" id="remember-row">
+                        <label class="remember-label">
+                            <input type="checkbox" id="remember">
+                            <span>Remember me</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="submit-button" id="submit-button">
+                        Sign in
+                    </button>
+                </form>
+                <div class="form-divider" id="social-divider">
+                    <span>or continue with</span>
+                </div>
+                <div class="social-buttons" id="social-buttons">
+                    <button type="button" class="social-button" id="google-button">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.73 7.18l7.28 5.65c4.25-3.92 7.49-9.71 7.49-17.3z"/>
+                            <path fill="#FBBC05" d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.75-4.59l-7.98-6.19A23.9 23.9 0 0 0 0 24c0 3.86.93 7.52 2.56 10.78l7.97-6.19z"/>
+                            <path fill="#34A853" d="M24 48c6.47 0 11.9-2.13 15.86-5.8l-7.28-5.65c-2.02 1.36-4.6 2.16-8.58 2.16-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                        </svg>
+                        Google
+                    </button>
+                    <button type="button" class="social-button" id="apple-button">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M16.37 12.14c.02 2.14 1.88 2.85 1.9 2.86-.02.05-.3 1.03-.98 2.04-.59.87-1.2 1.73-2.16 1.75-.94.02-1.25-.56-2.33-.56-1.08 0-1.42.54-2.31.58-.93.04-1.64-.94-2.24-1.8-1.22-1.76-2.15-4.97-.9-7.13.62-1.07 1.73-1.75 2.94-1.77.92-.02 1.79.62 2.33.62.54 0 1.56-.77 2.63-.66.45.02 1.72.18 2.54 1.37-.07.04-1.52.89-1.5 2.7zM14.64 6.8c.49-.59.82-1.4.73-2.21-.71.03-1.57.47-2.08 1.06-.46.53-.86 1.35-.75 2.14.79.06 1.6-.4 2.1-.99z"/>
+                        </svg>
+                        Apple
+                    </button>
+                </div>
+                <p class="account-switch" id="account-switch">
+                    Don't have an account?
+                    <button type="button" id="switch-mode">Create one</button>
+                </p>
+                <p class="form-message" id="form-message" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <aside class="faq-panel">
+            <div class="faq-content">
+                <p class="eyebrow">NEED HELP?</p>
+                <h2>Frequently asked<br>questions<span>.</span></h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do I create an account?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Click "Create one" on the left, fill in your
+                                name, email and password, then hit
+                                "Create account". You're ready to join
+                                the community.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Is my data secure?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Your personal information should be handled
+                                securely and in accordance with PRIME's
+                                Privacy Policy. Actual password encryption
+                                requires a properly configured authentication
+                                system.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Can I sign in with Google or Apple?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                PRIME plans to support Google and Apple
+                                sign-in. These options will become available
+                                once their authentication services are
+                                connected.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What if I forget my password?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Click "Forgot password?" to begin the
+                                recovery process. A real reset code can
+                                only be sent once PRIME's authentication
+                                system is connected.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-footer">
+                    <span>STAY CONNECTED.</span>
+                    <span>YOUR GAME. YOUR COMMUNITY.</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+<footer class="prime-footer">
+    <div class="footer-main">
+        <div class="footer-brand">
+            <a href="HTLM.html" class="footer-logo">
+                PRIME<span>.</span>
+            </a>
+            <p>
+                Connect, train, and play.
+                The platform that unites the sports community.
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="TikTok">TT</a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Navigation</h3>
+            <a href="HTLM.html">Home</a>
+            <a href="#courts">Courts</a>
+            <a href="#contact">Coaches</a>
+        </div>
+        <div class="footer-column">
+            <h3>Community</h3>
+            <a href="#community-groups">Groups</a>
+            <a href="#blog">Blog</a>
+        </div>
+        <div class="footer-column">
+            <h3>Legal</h3>
+            <a href="terms.html">Terms and conditions</a>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+        <p>© 2026 Prime. All rights reserved.</p>
+        <span>YOUR GAME. YOUR COMMUNITY. YOUR NEXT LEVEL.</span>
+    </div>
+</footer>
+</body>
+</html>

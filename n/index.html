@@ -1,89 +1,606 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/13.3.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/13.3.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <title>PRIME</title>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS.css">
+    <script src="JS.js" defer></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="#home" class="logo" aria-label="PRIME home">
+            <svg class="logo-icon" viewBox="0 0 60 60"
+                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="43" cy="8" r="4" fill="currentColor"/>
+                <path d="M37 17 L23 31 L13 40 L18 43
+                         L31 35 L25 47 L12 51 L8 56
+                         L26 53 L38 40 L44 28 L51 37
+                         L56 34 L45 20 Z"
+                      fill="currentColor"/>
+                <path d="M27 17 L36 20 L29 28 L23 25 Z"
+                      fill="currentColor"/>
+            </svg>
+            <span>PRIME</span>
+        </a>
+        <button class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#courts">Courts</a>
+              <a href="#community-groups">Community</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+            <a href="signin.html" class="sign-in mobile-sign-in">
+                Sign In
+            </a>
+        </nav>
+        <a href="signin.html" class="sign-in desktop-sign-in">
+            Sign In
+        </a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">-Sports platform</p>
+                <h1>
+                    CONNECT, TRAIN<br>
+                    AND PLAY,<br>
+                    WITH <span>PRIME.</span>
+                </h1>
+                <p class="hero-description">
+                    Find courts, meet certified coaches, and organize matches with a sports community all in one place.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>+30</h3>
+                        <p>Courts Available</p>
+                    </div>
+                    <div class="stat">
+                        <h3>+50</h3>
+                        <p>Certified Coaches</p>
+                    </div>
+                    <div class="stat">
+                        <h3>+500</h3>
+                        <p>Active Users</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="content-section" id="courts">
+            <p class="eyebrow">-Your Profile</p>
+            <h2>YOUR PROGRESS, ALWAYS IN VIEW.</h2>
+            <p>A personal dashboard with your favorite sports, stats, and upcoming matches, ready as soon as you log in.</p>
+        <div class="profile-grid">
+            <div class="profile-card">
+                <div class="user-info">
+                    <div class="user-avatar">JR</div>
+                    <div>
+                        <h3>Julia Reyes</h3>
+                        <p>Panama City · Intermediate level</p>
+                    </div>
+                </div>
+                <div class="sport-tags">
+                    <span>Soccer 5-a-side</span>
+                    <span>Padel</span>
+                    <span>Running</span>
+                </div>
+                <div class="stats-grid">
+                    <div class="profile-stat">
+                        <strong>42</strong>
+                        <span>MATCHES</span>
+                    </div>
+                    <div class="profile-stat">
+                        <strong>19</strong>
+                        <span>WORKOUTS</span>
+                    </div>
+                    <div class="profile-stat">
+                        <strong>7</strong>
+                        <span>ACHIEVEMENTS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-card matches-card">
+                <p class="matches-title">UPCOMING MATCHES</p>
+                <div class="match-item">
+                    <div class="match-date">
+                        <strong>18</strong>
+                        <span>JUL</span>
+                    </div>
+                    <div class="match-info">
+                        <h3>Soccer 5 – Los Halcones</h3>
+                        <p>Estadio Agustín "Muquita" Sánchez · 7:00 PM</p>
+                    </div>
+                </div>
+                <div class="match-item">
+                    <div class="match-date">
+                        <strong>21</strong>
+                        <span>JUL</span>
+                    </div>
+
+                    <div class="match-info">
+                        <h3>Coaching session – Padel</h3>
+                        <p>Complejo Deportivo de La Feria de La Chorrera · 6:30 AM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+<section class="content-section content-section-White" id="courts">
+    <p class="eyebrow">-Sports Courts</p>
+    <h2>
+        BOOK YOUR COURT IN<br>
+        UNDER A MINUTE.
+    </h2>
+</section>
+
+<section class="courts-listing" id="courts">
+    <div class="courts-toolbar">
+        <span class="sports-filter">All Sports</span>
+        <a
+            href="https://www.google.com/maps/search/sports+courts+La+Chorrera+Panama/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-button"
+        >
+            View Interactive Map
+        </a>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <div class="courts-grid">
+        <article class="court-card">
+            <div class="court-image">
+                <img
+                    src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=85"
+                    alt="Swimming pool"
+                >
+                <span class="court-rating">★ 4.6</span>
+            </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+            <div class="court-details">
+                <h3>La Chorrera Municipal Pool</h3>
+                <p class="court-location">La Chorrera, Panama West</p>
+
+                <div class="court-price">
+                    <strong>$25</strong>
+                    <span>/ hour</span>
+                    <span class="court-arrow">↗</span>
+                </div>
+
+                <button class="book-court" type="button">
+                    Book Court
+                </button>
+            </div>
+        </article>
+        <article class="court-card">
+            <div class="court-image">
+                <img
+                    src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=800&q=85"
+                    alt="Outdoor sports court"
+                >
+                <span class="court-rating">★ 4.7</span>
+            </div>
+            <div class="court-details">
+                <h3>La Chorrera Volley Court</h3>
+                <p class="court-location">La Chorrera, Panama West</p>
+
+                <div class="court-price">
+                    <strong>$40</strong>
+                    <span>/ hour</span>
+                    <span class="court-arrow">↗</span>
+                </div>
+
+                <button class="book-court" type="button">
+                    Book Court
+                </button>
+            </div>
+        </article>
+        <article class="court-card">
+            <div class="court-image">
+                <img
+                    src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=85"
+                    alt="Football pitch"
+                >
+                <span class="court-rating">★ 4.8</span>
+            </div>
+
+            <div class="court-details">
+                <h3>La Chorrera Turf Pitch</h3>
+                <p class="court-location">La Chorrera, Panama West</p>
+
+                <div class="court-price">
+                    <strong>$28</strong>
+                    <span>/ hour</span>
+                    <span class="court-arrow">↗</span>
+                </div>
+                <button class="book-court" type="button">
+                    Book Court
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="content-section community-section" id="blog">
+    <div class="community-heading">
+        <div class="community-text">
+            <p class="eyebrow">COMMUNITY</p>
+            <h2>
+                FIND YOUR<br>
+                NEXT TEAM.
+            </h2>
+            <p class="community-description">
+                Create groups, organize matches, and share your progress
+                with people who train like you.
+            </p>
+        </div>
+        <a href="community.html" class="read-more">
+            Read more <span>⟶</span>
+        </a>
+    </div>
+    <div class="community-grid" id="community-groups">
+        <article class="community-card">
+            <div class="group-header">
+                <div class="group-avatars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="group-info">
+                    <h3>Los Halcones FC</h3>
+                    <p>14 members · Soccer 5</p>
+                </div>
+            </div>
+            <p class="group-description">
+                Looking for 2 players for Saturday's match in
+                Costa del Este. Intermediate level.
+            </p>
+            <div class="group-footer">
+                <span>♥ &nbsp;32</span>
+                <span>● &nbsp;8 comments</span>
+                <span>↗ &nbsp;Share</span>
+            </div>
+        </article>
+        <article class="community-card">
+            <div class="group-header">
+                <div class="group-avatars">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="group-info">
+                    <h3>Padel at Dawn</h3>
+                    <p>9 members · Padel</p>
+                </div>
+            </div>
+            <p class="group-description">
+                Recurring group every Tuesday 6:00 AM in
+                Albrook. Recommended for beginner level.
+            </p>
+            <div class="group-footer">
+                <span>♥ &nbsp;21</span>
+                <span>● &nbsp;5 comments</span>
+                <span>↗ &nbsp;Share</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="impact-section" id="impact">
+    <div class="impact-heading">
+        <p class="eyebrow">PRIME IMPACT</p>
+        <h2>
+            THE SCOREBOARD<br>
+            SPEAKS FOR US.
+        </h2>
+    </div>
+    <div class="impact-board">
+
+        <div class="impact-stat">
+            <strong>+100</strong>
+            <span>MATCHES PER WEEK</span>
+        </div>
+        <div class="impact-stat">
+            <strong>+500</strong>
+            <span>ACTIVE USERS</span>
+        </div>
+        <div class="impact-stat">
+            <strong>+50</strong>
+            <span>COACHES</span>
+        </div>
+        <div class="impact-stat">
+            <strong>+30</strong>
+            <span>COURTS</span>
+        </div>
+    </div>
+    <div class="testimonials-grid">
+        <article class="testimonial-card">
+            <p class="testimonial-text">
+                "Thanks to Prime I found a team to play with
+                every week. It completely changed my routine."
+            </p>
+            <div class="testimonial-user">
+                <div class="testimonial-avatar">MG</div>
+                <div>
+                    <h3>Mariana Gómez</h3>
+                    <span>Soccer 5 player</span>
+                </div>
+            </div>
+        </article>
+        <article class="testimonial-card">
+            <p class="testimonial-text">
+                "Booking courts now takes less than a minute.
+                I no longer waste time calling anyone."
+            </p>
+            <div class="testimonial-user">
+                <div class="testimonial-avatar">LT</div>
+                <div>
+                    <h3>Luis Torres</h3>
+                    <span>Match organizer</span>
+                </div>
+            </div>
+        </article>
+        <article class="testimonial-card">
+            <p class="testimonial-text">
+                "I found a certified coach near my home.
+                My level improved within weeks."
+            </p>
+            <div class="testimonial-user">
+                <div class="testimonial-avatar">AV</div>
+                <div>
+                    <h3>Andrea Vega</h3>
+                    <span>Padel player</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="blog-section" id="blog">
+    <div class="blog-heading">
+        <p class="eyebrow">BLOG</p>
+        <h2>
+            HEALTH, TRAINING<br>
+            AND COMMUNITY.
+        </h2>
+    </div>
+    <article class="blog-card">
+        <div class="blog-image">
+            <img
+                src="https://img.freepik.com/foto-gratis/grupo-personas-haciendo-ejercicio-juntos-al-aire-libre_23-2151061447.jpg"
+                alt="Group of people exercising together outdoors">
+        </div>
+        <div class="blog-content">
+            <div class="blog-top">
+                <span class="blog-category">TRAINING</span>
+            <a href="article.html" class="blog-arrow">↗</a>
+            </div>
+            <h3>4 routines to boost your endurance</h3>
+            <p class="blog-meta">
+                Jul 28, 2026 <span>·</span> By Coach Ricardo
+            </p>
+            <a href="article.html" class="blog-read-more">
+                Read More
+            </a>   
+        </div>
+    </article>
+</section>
+
+<section class="contact-section" id="contact">
+    <div class="contact-left">
+        <p class="eyebrow">CONTACT</p>
+        <h2>
+            LET'S<br>
+            TALK?
+        </h2>
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="contactName">Name</label>
+                <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                >
+            </div>
+            <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="Your email address"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea
+                    id="contactMessage"
+                    name="message"
+                    placeholder="Tell us something..."
+                    rows="3"
+                    required
+                ></textarea>
+            </div>
+            <button type="submit" class="contact-submit">
+                Send message <span>↗</span>
+            </button>
+        </form>
+        <div class="contact-information">
+            <a href="mailto:hello@prime.app">
+                ✉ hello@prime.app
+            </a>
+            <a href="tel:+50760000000">
+                ☎ +507 6000-0000
+            </a>
+        </div>
+    </div>
+    <div class="contact-right">
+        <div class="faq-item">
+            <button class="faq-question" type="button"
+                aria-expanded="false">
+                <span>How do I book a court?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Explore the court map, filter by sport and
+                    schedule, and confirm your booking in seconds.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" type="button"
+                aria-expanded="false">
+                <span>Are the coaches certified?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Yes, all coaches on Prime undergo a thorough
+                    verification and certification process before
+                    joining the platform.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" type="button"
+                aria-expanded="false">
+                <span>Can I cancel a booking?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    You can cancel up to 2 hours before your
+                    scheduled time slot directly from your
+                    bookings dashboard.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+<footer class="prime-footer">
+    <div class="footer-main">
+        <div class="footer-brand">
+            <a href="HTLM.html" class="footer-logo">
+                PRIME<span>.</span>
+            </a>
+            <p>
+                Connect, train, and play.
+                The platform that unites the sports community.
+            </p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="TikTok">TT</a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Navigation</h3>
+            <a href="HTLM.html">Home</a>
+            <a href="#courts">Courts</a>
+            <a href="#contact">Coaches</a>
+        </div>
+        <div class="footer-column">
+            <h3>Community</h3>
+            <a href="#community-groups">Groups</a>
+            <a href="#blog">Blog</a>
+        </div>
+        <div class="footer-column">
+            <h3>Legal</h3>
+            <a href="terms.html">Terms and conditions</a>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+        <p>© 2026 Prime. All rights reserved.</p>
+        <span>YOUR GAME. YOUR COMMUNITY. YOUR NEXT LEVEL.</span>
+    </div>
+</footer>
+<div class="booking-modal" id="booking-modal" hidden>
+    <div class="booking-overlay" id="booking-overlay"></div>
+    <div class="booking-window" role="dialog"
+         aria-modal="true" aria-labelledby="booking-title">
+        <button class="booking-close" id="booking-close"
+                type="button" aria-label="Close">
+            ×
+        </button>
+        <div id="booking-content">
+            <div class="booking-image">
+                <img id="booking-image" src="" alt="Sports facility">
+            </div>
+            <div class="booking-details">
+                <h2 id="booking-title">Court name</h2>
+                <p class="booking-location" id="booking-location"></p>
+                <div class="booking-price">
+                    <div>
+                        <span>Price per hour</span>
+                        <strong id="booking-price">$0</strong>
+                    </div>
+                    <div>
+                        <span>Sport</span>
+                        <strong id="booking-sport">SPORT</strong>
+                    </div>
+                </div>
+                <div class="booking-section">
+                    <h3>Availability</h3>
+                    <div class="booking-dates" id="booking-dates"></div>
+                </div>
+                <div class="booking-section">
+                    <h3>Select a time slot</h3>
+                    <div class="booking-times" id="booking-times"></div>
+                </div>
+                <p class="booking-note">
+                    Free cancellation up to 2 hours before.
+                </p>
+                <p class="booking-demo-note">
+                    DEMO RESERVATION · No real booking will be made.
+                </p>
+                <button class="booking-confirm" id="booking-confirm"
+                        type="button" disabled>
+                    Continue to booking
+                </button>
+            </div>
+        </div>
+        <div class="booking-success" id="booking-success" hidden>
+            <div class="success-icon">✓</div>
+            <p class="booking-eyebrow">PRIME RESERVATIONS</p>
+            <h2>Booking confirmed!</h2>
+            <p>
+                Your demo reservation has been created successfully.
+            </p>
+            <div class="confirmation-details" id="confirmation-details"></div>
+            <p class="booking-demo-note">
+                This is a simulated confirmation. No actual reservation
+                has been made.
+            </p>
+            <button class="booking-confirm" id="booking-done" type="button">
+                Done
+            </button>
+        </div>
+    </div>
+</div>
+</body>
 </html>
